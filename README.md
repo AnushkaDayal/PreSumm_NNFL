@@ -73,7 +73,7 @@ python preprocess.py -mode format_to_bert -raw_path JSON_PATH -save_path BERT_DA
 * `JSON_PATH` is the directory containing json files (`../json_data`), `BERT_DATA_PATH` is the target directory to save the generated binary files (`../bert_data`)
 
 ## Task-1 
-Task-1 includes training the model on BERT data and plotting the relevant graphs. Follow the steps given in the ```Model_Training_and_Graph_Plotting.ipynb``` file to accomplish this task.
+Task-1 includes training the model on CNN/DailyMail data and plotting the relevant graphs. Follow the steps given in the ```Model_Training_and_Graph_Plotting.ipynb``` file to accomplish this task.
 
 ## Task-2
 Task-2 includes calculating the ROUGE scores on the test dataset from our trained model. You can download our custom trained models from the **Pre-trained Models** section below. Follow the steps in ```Rouge_Score_Evaluation.ipynb``` to accomplish this task.
@@ -109,9 +109,12 @@ The results we obtained on the CNN/DM testing dataset were as follows:  -
 
 ## Task-3
 Task-3 includes generating summaries on raw input. We have provided the raw input we used in the ```raw_data``` folder. Follow the steps mentioned in ```Summary_Generation.ipynb``` to generate the summaries on the raw input.
+For abstractive purposes: Each line in your input raw text file must be a single document
+For extractive purposes: You must insert [CLS] [SEP] as your sentence boundaries.
 
 ## Task-4
 Task-4 is about training the dataset on a custom dataset. We chose the **BBC Extractive dataset** for this purpose. The dataset can be downloaded from [here](https://www.kaggle.com/pariza/bbc-news-summary/data). Our custom trained model can be found in the **Pre-trained Models** section below. The steps for the training are mentioned in the ```Custom_Dataset_BBC.ipynb``` file. 
+To be able to follow the preprocessing steps above for your custom dataset, replace the "data_builder.py" file found in /src/prepro directory by the one in custom_data_training/
 
 ## Pretrained Models
 [Custom trained BertSumExt on CNN/DM dataset](https://drive.google.com/file/d/1rJaH1hEFWrz05xW4QHS1Kf5dobcHKJIZ/view?usp=sharing)
