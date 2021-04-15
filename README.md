@@ -3,6 +3,107 @@ This repository contains the code of our project done on the EMNLP 2019 paper [*
 
 The original repository for the paper can be found [here](https://github.com/nlpyang/PreSumm).
 
+## Directory Structure
+```bash
+.
+├── Custom_Dataset_BBC.ipynb
+├── LICENSE
+├── Model_Training_and_Graph_Plotting.ipynb
+├── README.md
+├── Rouge_Score_Evaluation.ipynb
+├── Summary_Generation.ipynb
+├── bert_data
+├── custom_data_training
+│   └── data_builder.py
+├── json_data
+├── logs
+├── models
+├── raw_data
+├── requirements.txt
+├── results
+├── src
+│   ├── cal_rouge.py
+│   ├── distributed.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── adam.py
+│   │   ├── data_loader.py
+│   │   ├── decoder.py
+│   │   ├── encoder.py
+│   │   ├── loss.py
+│   │   ├── model_builder.py
+│   │   ├── neural.py
+│   │   ├── optimizers.py
+│   │   ├── predictor.py
+│   │   ├── reporter.py
+│   │   ├── reporter_ext.py
+│   │   ├── trainer.py
+│   │   └── trainer_ext.py
+│   ├── others
+│   │   ├── __init__.py
+│   │   ├── logging.py
+│   │   ├── pyrouge.py
+│   │   ├── tokenization.py
+│   │   └── utils.py
+│   ├── post_stats.py
+│   ├── prepro
+│   │   ├── __init__.py
+│   │   ├── data_builder.py
+│   │   ├── smart_common_words.txt
+│   │   └── utils.py
+│   ├── preprocess.py
+│   ├── train.py
+│   ├── train_abstractive.py
+│   ├── train_extractive.py
+│   └── translate
+│       ├── __init__.py
+│       ├── beam.py
+│       └── penalties.py
+└── urls
+```
+
+## Code files
+[train.py](src/train.py) - Contains the main training workflow of the models. 
+
+[train_abstractive.py](src/train_abstractive.py) - Contains the training, validation and testing workflow of the abstractive model in a distributed manner. 
+
+[train_extractive.py](src/train_extractive.py) - Contains the training, validation and testing workflow of the extractive model in a distributed manner. 
+
+[preprocess.py](src/preprocess.py) - Wraps around functions defined in [databuilder.py](src/prepo/databuilder.py) file and provides a workflow for preprocessing the dataset from raw input files into a form that can be fed to the model.
+
+[distributed.py](src/distributed.py) - Contains helper functions to support distributed training using multiple GPUs.
+
+[post_stats.py](src/post_stats.py) - 
+
+[cal_rouge.py](src/cal_rouge.py) - 
+
+### Inside src/models
+[adam.py](src/train/adam.py) - Implements the adam optimizer algorithm.
+
+[data_loader.py](src/train/data_loader.py) - Loads the dataset and iteratively passes them in batches.
+
+[decoder.py](src/train/decoder.py) - Defines the structure of the Transformer decoder network with attention mechanism.
+
+[encoder.py](src/train/encoder.py) - Defines the structure of the Transformer encoder network.
+
+[loss.py](src/train/loss.py) - Handles the details of loss computation during training.
+
+[model_builder.py](src/train/model_builder.py) - Integrates the enocoder and decoder architecture, along with the optimizer to define the model.
+
+[neural.py](src/train/neural.py) - 
+
+[optimizers.py](src/train/optimizers.py) - 
+
+[predictor.py](src/train/predictor.py) - 
+
+[reporter_ext.py](src/train/reporter_ext.py) -
+
+[reporter.py](src/train/reporter.py) -
+
+[trainer_ext.py](src/train/trainer_ext.py) -
+
+[trainer.py](src/train/trainer.py) -
+
 ## Tasks assigned
 1. Train the models and plot the relevant metrics(loss/F1/accuracy/etc) with respect to epochs.
 2. Compute and report the Rouge scores for your trained model.
