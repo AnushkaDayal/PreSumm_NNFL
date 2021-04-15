@@ -1,6 +1,8 @@
 # Term paper project on "Text summarization using pretrained encoders"
 This repository contains the code of our project done on the EMNLP 2019 paper [**Text Summarization with Pretrained Encoders**](https://arxiv.org/abs/1908.08345) as a part of the course [BITS F312] Neural Networks and Fuzzy Logic at BITS Pilani.
 
+The original repository for the paper can be found [here](https://github.com/nlpyang/PreSumm).
+
 ## Tasks assigned
 1. Train the models and plot the relevant metrics(loss/F1/accuracy/etc) with respect to epochs.
 2. Compute and report the Rouge scores for your trained model.
