@@ -112,6 +112,7 @@ Task-3 includes generating summaries on raw input. We have provided the raw inpu
 
 ## Task-4
 Task-4 is about training the dataset on a custom dataset. We chose the **BBC Extractive dataset** for this purpose. The dataset can be downloaded from [here](https://www.kaggle.com/pariza/bbc-news-summary/data). Our custom trained model can be found in the **Pre-trained Models** section below. The steps for the training are mentioned in the ```Custom_Dataset_BBC.ipynb``` file. 
+To be able to follow the preprocessing steps above for your custom dataset, replace the "data_builder.py" file found in /src/prepro directory by the one in custom_data_training/
 
 ## Pretrained Models
 [Custom trained BertSumExt on CNN/DM dataset](https://drive.google.com/file/d/1rJaH1hEFWrz05xW4QHS1Kf5dobcHKJIZ/view?usp=sharing)
