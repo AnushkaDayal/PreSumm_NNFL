@@ -63,6 +63,9 @@ The original repository for the paper can be found [here](https://github.com/nlp
 ```
 
 ## Code files
+
+### Inside src
+
 [train.py](src/train.py) - Contains the main training workflow of the models. 
 
 [train_abstractive.py](src/train_abstractive.py) - Contains the training, validation and testing workflow of the abstractive model in a distributed manner. 
@@ -73,9 +76,9 @@ The original repository for the paper can be found [here](https://github.com/nlp
 
 [distributed.py](src/distributed.py) - Contains helper functions to support distributed training using multiple GPUs.
 
-[post_stats.py](src/post_stats.py) - 
+[cal_rouge.py](src/cal_rouge.py) - To calculate the rouge scores of the generated summaries. 
 
-[cal_rouge.py](src/cal_rouge.py) - 
+[post_stats.py](src/post_stats.py) 
 
 ### Inside src/models
 [adam.py](src/train/adam.py) - Implements the adam optimizer algorithm.
@@ -90,19 +93,16 @@ The original repository for the paper can be found [here](https://github.com/nlp
 
 [model_builder.py](src/train/model_builder.py) - Integrates the enocoder and decoder architecture, along with the optimizer to define the model.
 
-[neural.py](src/train/neural.py) - 
+[neural.py](src/train/neural.py) - Contains implementation of feedforward and multi-head attention layers.
 
-[optimizers.py](src/train/optimizers.py) - 
+[optimizers.py](src/train/optimizers.py) - Contains controller class for optimization and function to update the model parameters based on current gradients.
 
-[predictor.py](src/train/predictor.py) - 
+[predictor.py](src/train/predictor.py) - Translates the generated output and gives the predicted summary.
 
-[reporter_ext.py](src/train/reporter_ext.py) -
+[reporter_ext.py](src/train/reporter_ext.py) and [reporter.py](src/train/reporter.py) - Functionalities to report metrics during the training steps.
 
-[reporter.py](src/train/reporter.py) -
-
-[trainer_ext.py](src/train/trainer_ext.py) -
-
-[trainer.py](src/train/trainer.py) -
+[trainer_ext.py](src/train/trainer_ext.py) and [trainer.py](src/train/trainer.py) - Includes functions that controls the training process and defines the workflow.
+ 
 
 ## Tasks assigned
 1. Train the models and plot the relevant metrics(loss/F1/accuracy/etc) with respect to epochs.
