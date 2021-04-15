@@ -73,7 +73,7 @@ python preprocess.py -mode format_to_bert -raw_path JSON_PATH -save_path BERT_DA
 * `JSON_PATH` is the directory containing json files (`../json_data`), `BERT_DATA_PATH` is the target directory to save the generated binary files (`../bert_data`)
 
 ## Task-1 
-Task-1 includes training the model on BERT data and plotting the relevant graphs. Follow the steps given in the ```Model_Training_and_Graph_Plotting.ipynb``` file to accomplish this task.
+Task-1 includes training the model on CNN/DailyMail data and plotting the relevant graphs. Follow the steps given in the ```Model_Training_and_Graph_Plotting.ipynb``` file to accomplish this task.
 
 ## Task-2
 Task-2 includes calculating the ROUGE scores on the test dataset from our trained model. You can download our custom trained models from the **Pre-trained Models** section below. Follow the steps in ```Rouge_Score_Evaluation.ipynb``` to accomplish this task.
