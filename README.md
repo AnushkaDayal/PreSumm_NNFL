@@ -109,6 +109,8 @@ The results we obtained on the CNN/DM testing dataset were as follows:  -
 
 ## Task-3
 Task-3 includes generating summaries on raw input. We have provided the raw input we used in the ```raw_data``` folder. Follow the steps mentioned in ```Summary_Generation.ipynb``` to generate the summaries on the raw input.
+For abstractive purposes: Each line in your input raw text file must be a single document
+For extractive purposes: You must insert [CLS] [SEP] as your sentence boundaries.
 
 ## Task-4
 Task-4 is about training the dataset on a custom dataset. We chose the **BBC Extractive dataset** for this purpose. The dataset can be downloaded from [here](https://www.kaggle.com/pariza/bbc-news-summary/data). Our custom trained model can be found in the **Pre-trained Models** section below. The steps for the training are mentioned in the ```Custom_Dataset_BBC.ipynb``` file. 
